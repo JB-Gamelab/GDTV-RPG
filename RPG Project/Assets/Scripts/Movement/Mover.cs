@@ -10,12 +10,16 @@ namespace RPG.Movement {
         private const string FORWARD_SPEED = "forwardSpeed";
 
         private NavMeshAgent navMeshAgent;
+        private Health health;
 
         private void Start() {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
         }
 
         private void Update() {
+            navMeshAgent.enabled = !health.IsDead();
+
             UpdateAnimator();
         }
 

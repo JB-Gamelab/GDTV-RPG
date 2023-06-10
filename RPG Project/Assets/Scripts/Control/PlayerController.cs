@@ -4,12 +4,20 @@ using UnityEngine;
 using RPG.Movement;
 using System;
 using RPG.Combat;
+using RPG.Core;
 
 namespace RPG.Control {
     public class PlayerController : MonoBehaviour {
 
-        private void Update() {
 
+        private Health health;
+
+        private void Start() {
+            health = GetComponent<Health>();
+        }
+
+        private void Update() {
+            if (health.IsDead()) return; //If player dead stop movement and combat actions
             //If combat target, ignore skip movement logic
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
@@ -22,10 +30,11 @@ namespace RPG.Control {
             //Check if raycast hits a combat target
             foreach (RaycastHit hit in hits) {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (target == null) continue; //if not a combat target, skip following logic and check next array entry
+                if (target == null) continue;
+                if (!GetComponent<Fighter>().CanAttack(target.gameObject)) continue;
 
-                if (Input.GetMouseButtonDown(0)) {
-                    GetComponent<Fighter>().Attack(target);
+                if (Input.GetMouseButton(0)) {
+                    GetComponent<Fighter>().Attack(target.gameObject);
                 }
 
                 return true;
