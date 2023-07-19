@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7005215603621792918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3496615450957671854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f172a8441ec73f4ab61735672b7680a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &343401623
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26,6 +14,18 @@ CapsuleCollider:
   m_Height: 1.87
   m_Direction: 1
   m_Center: {x: 0, y: 0.68, z: 0}
+--- !u!114 &7005215603621792918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496615450957671854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f172a8441ec73f4ab61735672b7680a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5608260404328376768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +87,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bfbe2e8b331e2cc42be1591f949c0e41, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!4 &5608260404328702020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+  m_PrefabInstance: {fileID: 5608260404328376768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6531344071323891980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,9 +107,25 @@ PrefabInstance:
       propertyPath: weaponDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1519274390392040892, guid: 0193ae440f3979e458373efbd4b7fbb6, type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 9000738680359748959, guid: 911bd6a4caaebfe4b877ec48d7369f59, type: 3}
+    - target: {fileID: 1519274390392040892, guid: 0193ae440f3979e458373efbd4b7fbb6, type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 5608260404328702020}
+    - target: {fileID: 1519274390392040892, guid: 0193ae440f3979e458373efbd4b7fbb6, type: 3}
+      propertyPath: weaponOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: 41066cc96c9763e43a9040c484d3dd2c, type: 2}
     - target: {fileID: 3293178722790076315, guid: 0193ae440f3979e458373efbd4b7fbb6, type: 3}
       propertyPath: healthPoints
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872164600637405399, guid: 0193ae440f3979e458373efbd4b7fbb6, type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 6508036752062373467, guid: 0193ae440f3979e458373efbd4b7fbb6, type: 3}
       propertyPath: m_RootOrder

@@ -1,5 +1,6 @@
 using RPG.Core;
 using RPG.Movement;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,16 @@ namespace RPG.Combat {
         [SerializeField] private float weaponRange = 2f;
         [SerializeField] private float timeBetweenAttacks = 1f;
         [SerializeField] private float weaponDamage = 5f;
+        [SerializeField] private GameObject weaponPrefab = null;
+        [SerializeField] private Transform handTransform = null;
+        [SerializeField] private AnimatorOverrideController weaponOverride = null;
         
         private Health target;
         private float timeSinceLastAttack = Mathf.Infinity;
+
+        private void Start() {
+            SpawnWeapon();
+        }
 
         private void Update() {
             timeSinceLastAttack += Time.deltaTime;
@@ -29,6 +37,12 @@ namespace RPG.Combat {
                 GetComponent<Mover>().Cancel();
                 AttackBehaviour();
             }
+        }
+
+        private void SpawnWeapon() {
+            Instantiate(weaponPrefab, handTransform);
+            Animator animator = GetComponent<Animator>();
+            animator.runtimeAnimatorController = weaponOverride;
         }
 
         private void AttackBehaviour() {
