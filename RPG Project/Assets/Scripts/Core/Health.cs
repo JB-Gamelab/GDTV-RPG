@@ -41,7 +41,7 @@ namespace RPG.Core {
             healthPoints = (float)state;
 
             if (healthPoints == 0) {
-                isDead = true;
+                Die();
             }
         }
 
