@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8180709997236760194
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 841247839519963777, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: isHoming
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345189978180509460, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.042
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607269483757370135, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Name
+      value: ArrowProjectileBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814999101148296327, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814999101148296327, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 19082
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814999101148296327, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814999101148296327, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.6793624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814999101148296327, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.23366857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814999101148296327, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659272681997846855, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d20694ce1d261574ea0c97fc534decf2, type: 3}
