@@ -1,12 +1,14 @@
 using RPG.Core;
 using RPG.Movement;
+using RPG.Saving;
+using RPG.Attributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Combat {
-    public class Fighter : MonoBehaviour, IAction {
+    public class Fighter : MonoBehaviour, IAction, ISaveable {
 
         private const string ATTACK = "attack";
         private const string STOPATTACK = "stopAttack";
@@ -21,7 +23,9 @@ namespace RPG.Combat {
         private float timeSinceLastAttack = Mathf.Infinity;
 
         private void Start() {
-            EquipWeapon(defaultWeapon);
+            if (currentWeapon == null) {
+                EquipWeapon(defaultWeapon);
+            }
         }
 
         private void Update() {
@@ -44,6 +48,10 @@ namespace RPG.Combat {
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
+        public Health GetTarget() {
+            return target; 
+        }
+
         private void AttackBehaviour() {
             transform.LookAt(target.transform);
             if (timeSinceLastAttack > timeBetweenAttacks) {
@@ -63,9 +71,9 @@ namespace RPG.Combat {
             if (target == null) return;
 
             if (currentWeapon.HasProjectile()) {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject);
             } else {
-                target.TakeDamage(currentWeapon.GetDamage());
+                target.TakeDamage(gameObject, currentWeapon.GetDamage());
             }
         }
 
@@ -98,6 +106,16 @@ namespace RPG.Combat {
         private void StopAttack() {
             GetComponent<Animator>().ResetTrigger(ATTACK);
             GetComponent<Animator>().SetTrigger(STOPATTACK);
+        }
+
+        public object CaptureState() {
+            return currentWeapon.name;
+        }
+
+        public void RestoreState(object state) {
+            string weaponName = (string)state;
+            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
         }
     }
 }
